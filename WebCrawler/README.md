@@ -1,6 +1,6 @@
 # WebCrawler
 
-A simple multi-threaded python web crawler. The webcrawler uses scraping and queueing from a base url and recursively visits all urls in a given page and so on..
+A simple multi-threaded python web crawler. The webcrawler is given a base url as input. It reads the content of url and identify other urls in the page and recursively visits each url and perfoms the same operations.
 
 # MacOS Instruction
 
