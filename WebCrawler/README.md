@@ -9,8 +9,9 @@ A simple multi-threaded python web crawler. The webcrawler is given a base url a
  -bs4
 
 # Install other dependencies using pip	
-pip3 intall requests
-pip3 install beautifulsoup4
+- pip3 intall requests
+
+- pip3 install beautifulsoup4
 
 # Running the Application
 
