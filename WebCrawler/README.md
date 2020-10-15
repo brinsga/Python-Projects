@@ -20,7 +20,7 @@ python3 WebScrapper.py
 
 Enter the url when prompted.
 
-The ouput will be printed to the log file named "logs.txt" until a keyboard interrupt is prompted.
+The output will be printed to the log file named "logs.txt" until a keyboard interrupt is prompted.
 
 # Running the test case file
 
