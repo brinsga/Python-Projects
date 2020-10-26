@@ -17,18 +17,46 @@ class BoardGame():
                 return True
         return False
 
-    def setValue(self, x, y,i,j):
-        if self.allowed(x,y, i, j):
-            
-            self.board.write(x , y , self.currentPlayer.returnSymbol(), i, j)
+    def gameWon(self, symbol= self.currentPlayer.returnSymbol):
+        result = self.board.gameWon(symbol)
 
-            if self.currentPlayer.returnName() == "p1":
-                self.currentPlayer = self.p2
+        if result:
+            if self.board.gameWon == "Tie":
+                print("The Game has been tied")
             else:
+                if result == "*":
+                    print("Player1 Won")
+                else:
+                    print("Player2 Won")
+            
+            return True
+
+        else:
+            return False
+
+
+    def changePlayer(self):
+        if self.currentPlayer.returnName() == "p1":
+                self.currentPlayer = self.p2
+        else:
                 self.currentPlayer = self.p1
+
+
+    def setValue(self, x, y, i, j):
+        if self.allowed(x,y, i, j):
+            self.board.write(x , y , self.currentPlayer.returnSymbol(), i, j)
+            return True
 
         else:
             print("Please enter a different location")
+            return False
+
+
+    
+
+    
+
+    
 
     
             

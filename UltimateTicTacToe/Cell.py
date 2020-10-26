@@ -35,17 +35,17 @@ class Cell():
 	def isComplete(self, symbol):
 
 		if self.available == 0:
-			return False
+			return "T"
 
 		diagonal = []
 
 		for i in range(3):
 			if self.components[i:i+1][:].count(symbol) == 3 or self.components[:][i:i+1].count(symbol) == 3:
-				return True
+				return symbol
 			diagonal.append(self.components[i][i])
 
 		if (diagonal.count(symbol)) == 3:
-			return True
+			return symbol
 
 		return None
 

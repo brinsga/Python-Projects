@@ -34,13 +34,36 @@ class Board():
 		self.board[i][j].addSymbol(symbol,x,y)
 		self.boardState[i][j] = self.board[i][j].isComplete(symbol)
 
+
 	def isAlreadyFilled(self,x,y,i,j):
 		return self.board[i][j].alreadyFilled(x,y)
 
+	def gameWon(self, symbol):
+
+		diagonal = []
+
+		for i in range(3):
+			if self.boardState[i:i+1][:].count(symbol) == 3 or self.boardState[:][i:i+1].count(symbol) == 3:
+				return symbol
+			diagonal.append(self.boardState[i][i])
+
+		if (diagonal.count(symbol)) == 3:
+			return symbol
+
+		count = 0
+		for i in range(3):
+			for j in range(3):
+				if self.boardState[i][j] == "T":
+					count +=1
+
+		if count == 9:
+			return "Tie"
+
+		return None
+
+
 	def getBoard(self):
 		return self.board
-
-
 
 
 b = Board(3)
