@@ -34,6 +34,13 @@ class Board():
 		self.board[i][j].addSymbol(symbol,x,y)
 		self.boardState[i][j] = self.board[i][j].isComplete(symbol)
 
+	def isAlreadyFilled(self,x,y,i,j):
+		return self.board[i][j].alreadyFilled(x,y)
+
+	def getBoard(self):
+		return self.board
+
+
 
 
 b = Board(3)

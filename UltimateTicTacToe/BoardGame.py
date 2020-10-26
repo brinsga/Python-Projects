@@ -1,5 +1,6 @@
 from Board import Board
 from Player import Player
+
 class BoardGame():
 
     def __init__(self, n, startx, starty):
@@ -11,13 +12,13 @@ class BoardGame():
         self.currentBoard = [startx, starty]
 
     def allowed(self, x, y , i , j):
-        if not self.board.board.[i][j].alreadyFilled(x,y):
+        if not self.board.isAlreadyFilled(x,y,i,j):
             if not self.currentBoard or (x == self.currentBoard[0] and y == self.currentBoard[1]):
                 return True
         return False
 
-    def setValue(self, x, y, i= self.currentBoard[0], j=self.currentBoard[1]):
-        if self.allowed(x,y):
+    def setValue(self, x, y,i,j):
+        if self.allowed(x,y, i, j):
             
             self.board.write(x , y , self.currentPlayer.returnSymbol(), i, j)
 
@@ -27,8 +28,9 @@ class BoardGame():
                 self.currentPlayer = self.p1
 
         else:
+            print("Please enter a different location")
 
-            print("Please enter a diff")
+    
             
 
 
