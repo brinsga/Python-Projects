@@ -1,3 +1,7 @@
+# WebCrawler
+
+A multi-threaded python-based web crawler. The webcrawler is given a base url as input. It reads the content of url and identify other urls in the page and recursively visits each url and perfoms the same operations.
+
 # MacOS Instruction
 
 # Required Python Modules for the application:
@@ -5,8 +9,9 @@
  -bs4
 
 # Install other dependencies using pip	
-pip3 intall requests
-pip3 install beautifulsoup4
+- pip3 intall requests
+
+- pip3 install beautifulsoup4
 
 # Running the Application
 
@@ -16,7 +21,7 @@ python3 WebScrapper.py
 
 Enter the url when prompted.
 
-The ouput will be printed to the log file named "logs.txt" until a keyboard interrupt is prompted.
+The output will be printed to the log file named "logs.txt" until a keyboard interrupt is prompted.
 
 # Running the test case file
 
