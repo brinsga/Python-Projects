@@ -11,12 +11,12 @@ class BoardGame():
         self.currentBoard = [startx, starty]
 
     def allowed(self, x, y , i , j):
-        if not self.board[i][j].alreadyFilled(x,y):
+        if not self.board.board.[i][j].alreadyFilled(x,y):
             if not self.currentBoard or (x == self.currentBoard[0] and y == self.currentBoard[1]):
                 return True
         return False
 
-    def setValue(self, x, y, i=self.currentBoard[0], j=self.currentBoard[1]):
+    def setValue(self, x, y, i= self.currentBoard[0], j=self.currentBoard[1]):
         if self.allowed(x,y):
             
             self.board.write(x , y , self.currentPlayer.returnSymbol(), i, j)

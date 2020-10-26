@@ -1,4 +1,5 @@
 from Cell import Cell
+
 class Board():
 	"""
 	This Board stores the 9 cells in the ultimate tic-tac toe and
@@ -33,8 +34,6 @@ class Board():
 		self.board[i][j].addSymbol(symbol,x,y)
 		self.boardState[i][j] = self.board[i][j].isComplete(symbol)
 
-
-	def won
 
 
 b = Board(3)
